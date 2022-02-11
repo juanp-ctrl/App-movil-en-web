@@ -1,0 +1,84 @@
+html{
+    font-size: 63.2%;
+    text-align: center;
+}
+
+#celular{
+    width: 420px;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+header div img{
+    width: 40%;
+    padding: 20px;
+}
+
+#home{
+    text-align: right;
+    width: 20%;
+}
+
+#menu{
+    text-align: left;
+    width: 20%;
+}
+
+#titulo{
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+main{
+    width: 100%;
+}
+
+#enlace{
+    display: flex;
+    width: 100%;
+}
+
+#espaciado{
+    width: 11%;
+}
+
+#contenido{
+    display: flex;
+    width: 78%;
+}
+
+#contenido #imagen{
+    width: 30%;
+}
+
+#contenido #imagen img{
+    width: 50%;
+    padding: 20px 15px 0px 15px;
+}
+
+#contenido #texto{
+    text-align: left;
+    width: 70%;
+    border-bottom: 1px solid black;
+}
