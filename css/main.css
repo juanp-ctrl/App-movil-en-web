@@ -142,3 +142,29 @@ main{
     width: 70%;
     border-bottom: 1px solid black;
 }
+
+#contenido #imagen-ap img{
+    width: 95px;
+    height: 95px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 3px;
+}
+#caja{
+    border:1px solid black;
+    width: 222px;
+    height: 132px;
+
+}
+#contenido #texto-box{
+    text-align:left;
+    width: 60%;
+}
+
+#texto-box p{
+    width: 175px;
+    height: 90px;
+    margin-inline-start: 3px;
+    margin-inline-end: 3px;
+}
+
