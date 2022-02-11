@@ -1,25 +1,27 @@
+let ele2, ele, menu;
+
 //Iniciar la ejecucion de la funcion cuando la pagina cargue por completo
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
+        ele2 = document.getElementsByTagName("div")[0];
+        ele = ele2.getElementsByTagName("div")[0];
+        menu = document.getElementsByTagName("nav")[0];
         init();
     }
 });
 
 //Funcion para cambiar el estado del menu
 function toggleMenu() {
-    var ele2 = document.getElementsByTagName("div")[0];
-    var ele = ele2.getElementsByTagName("div")[0];
     if (!hasClass(ele, "menu-open")) {
-        addClass(ele, "menu-open");
+        ele.classList.add("menu-open");
     } else {
-        removeClass(ele, "menu-open");
+        ele.classList.remove("menu-open");
     }
 
-    var menu = document.getElementsByTagName("nav")[0];
     if (!hasClass(menu, "menu-open")) {
-        addClass(menu, "menu-open");
+        menu.classList.add("menu-open");
     } else {
-        removeClass(menu, "menu-open");
+        menu.classList.remove("menu-open");
     }
 }
 
@@ -30,18 +32,6 @@ function init() {
 }
 
 function hasClass(ele, cls) {
-    console.log("vale");
     return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
-}
-
-function addClass(ele, cls) {
-    if (!hasClass(ele, cls)) ele.className += "" + cls;
-}
-
-function removeClass(ele, cls) {
-    if (hasClass(ele, cls)) {
-        var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-        ele.className = ele.className.replace(reg, '');
-    }
 }
 
