@@ -28,7 +28,7 @@ html{
     height: 100%;
     padding: .5rem 1rem;
     box-shadow: 0 6px 12px rgba(107, 82, 82, 0.3);
-    background-color: white;
+    background-color:#FFFAFB;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -83,6 +83,8 @@ header{
     width: 100%;
     display: flex;
     padding-bottom: 30px;
+    background-color: #7DE2D1;
+    color:#131515;
 }
 
 header div img{
@@ -106,7 +108,7 @@ header div img{
 }
 
 #titulo{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #131515;
     width: 60%;
 }
 
@@ -140,7 +142,7 @@ main{
 #contenido #texto{
     text-align: left;
     width: 70%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #339989;
 }
 
 #contenido #imagen-ap img{
@@ -151,7 +153,7 @@ main{
     padding-right: 3px;
 }
 #caja{
-    border:1px solid black;
+    border-bottom:1px solid #339989;
     width: 222px;
     height: auto;
 
@@ -172,10 +174,11 @@ main{
     height: 25px;
     margin-left: 260px;
     margin-bottom: 5px;
+    margin-top: 15px;
  }
 
  #caja-grupo{
-    border:1px solid black;
+    border-bottom:1px solid #339989;
     width: 320px;
     height: auto;
  }
@@ -222,8 +225,8 @@ main{
     width: 320px;
     margin-left: 45px;
     margin-top: 10px;
-    border-top:1px solid black;
-    border-bottom:1px solid black;
+    border-top:1px solid #339989;
+    border-bottom:1px solid #339989;
 }
 #caja-detalle p{
     text-align: center;
