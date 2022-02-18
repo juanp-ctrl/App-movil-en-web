@@ -97,6 +97,23 @@ header div img{
     padding: 28px 20px 0px 10px;
 }
 
+#vista_login.hide{
+    display: none;
+}
+
+#img_login{
+    width: 100%;
+}
+
+#img_login img{
+    width: 60%;
+    padding: 40px;
+}
+
+#vista_home.hide{
+    display: none;
+}
+
 #home{
     text-align: right;
     width: 20%;
