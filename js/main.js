@@ -1,4 +1,4 @@
-let ele2, ele, menu, v_login, v_home, entrar, vistas = [];
+let ele2, ele, menu, v_login, v_home, entrar, cerrar, vistas = [];
 
 //Iniciar la ejecucion de la funcion cuando la pagina cargue por completo
 document.addEventListener('readystatechange', function() {
@@ -16,18 +16,41 @@ document.addEventListener('readystatechange', function() {
 });
 
 function cargarVistas(){
-    for(let i = 0; i<vistas.length; i++){
-        vistas[i].classList.add("hide");
+    let s = sessionStorage.getItem("sesion");
+    if(s == 0){
+        for(let i = 0; i<vistas.length; i++){
+            vistas[i].classList.add("hide");
+        }
+        vistas[0].classList.remove("hide");
+        entrar = document.getElementById("Entrar").addEventListener("click", vistaHome);
+        cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
     }
-    vistas[0].classList.remove("hide");
-    entrar = document.getElementById("Entrar").addEventListener("click", vistaHome);
+    else{
+        vistaHome();
+    }
 }
 
 function vistaHome(){
+    sessionStorage.setItem("sesion", 1);
     for(let i = 0; i<vistas.length; i++){
         vistas[i].classList.add("hide");
     }
     vistas[1].classList.remove("hide");
+    cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
+}
+
+function cerrarSesion(){
+    document.getElementById("real-menu").classList.remove("menu-open");
+    document.getElementById("body-overlay").addEventListener("click", cerrarRecuadro);
+    document.getElementById("recuadro_s").classList.add("active");
+    document.getElementById("entendido").addEventListener("click", cerrarRecuadro);
+}
+
+function cerrarRecuadro(){
+    document.getElementById("recuadro_s").classList.remove("active");
+    document.getElementById("body-overlay").classList.remove("menu-open");
+    sessionStorage.setItem("sesion", 0);
+    cargarVistas();
 }
 
 //Funcion para cambiar el estado del menu

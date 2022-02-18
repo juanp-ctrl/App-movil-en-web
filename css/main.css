@@ -7,6 +7,17 @@ html{
     width: 420px;
 }
 
+#recuadro_s{
+    display: none;
+    border-radius: 10px;
+    position: fixed;
+    background-color: white;
+    z-index: 3;
+    padding: 40px;
+    left: 11%;
+    top: 40%;
+}
+
 #body-overlay {
     width: 420px;
     height: 100vh;
@@ -41,6 +52,10 @@ html{
 
 #real-menu.menu-open{
     left: 0;
+}
+
+#recuadro_s.active{
+    display: block;
 }
 
 #open-menu{
