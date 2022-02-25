@@ -296,3 +296,57 @@ main{
 #caja-detalle p{
     text-align: center;
 }
+
+.about-grid h3{
+	font-size: 2em;
+    margin-bottom: 0.5em;
+	color: #2B2C28;
+    text-align: left;
+    width: auto;
+}
+.about-grid h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #339989;
+    text-align: left;
+    border-top:1px solid #2B2C28;
+    margin-left: 4px;
+	margin-bottom: 0.5em;
+}
+.about-grid p {
+    font-size: 1.2em;
+    color: #131515;
+    line-height:1.5em;
+    text-align: left;
+    margin-left: 4px;
+    width: auto;
+  }
+
+.team-grid h3{
+    font-size: 2em;
+    color: #339989;
+    font-weight: bold;
+    border-top:1px solid #339989;
+    margin: 0.6em 0 0.3em;
+  }
+  .team-grid div {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #131515;
+    text-align: center;
+    line-height: 1em;
+   }
+  .team-grid {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+
+  }
+
+  .imagen-team {
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    display:inline-block;
+  }
+ 
