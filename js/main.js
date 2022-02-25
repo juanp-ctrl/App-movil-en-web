@@ -83,7 +83,7 @@ function hasClass(ele, cls) {
 // identificamos la seleccion del combo
 //de acuerdo con la seleccion mostramos solo los que tienen ese id que corresponde a la materia
 //seleccionada y ocultamos el resto
-function cargarApuntes(){
+/*function cargarApuntes(){
 
 }
 function muestra_oculta(id){
@@ -93,5 +93,5 @@ function muestra_oculta(id){
     }
     }
     window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
-    muestra_oculta('contenido');/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
-}
+    //muestra_oculta('contenido'); "contenido_a_mostrar" //es el nombre que le dimos al DIV
+//}
