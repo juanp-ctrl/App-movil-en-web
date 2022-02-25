@@ -16,6 +16,9 @@ document.addEventListener('readystatechange', function() {
             vistas.push(v_home);
             cargarVistas();
         }
+        else if(page === "apuntes.html"){
+            cargarCategorias();
+        }
         else{
             cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
         }
@@ -90,21 +93,43 @@ function init() {
 function hasClass(ele, cls) {
     return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
 }
+let categorias = [], val;
+function cargarCategorias(){
+    let opcion = document.getElementById('opciones').selectedOptions[0].value;
+    for (let i = 0; i < 4; i++) {
+        let valor = document.getElementById("enlace").childNodes;
+        categorias.push(valor);
+    }
+
+    let n = 0;
+
+    categorias.forEach(element => {
+        if(element.item(n).id != opcion){
+            val = document.getElementById(element.item(n).id);
+        }
+        n++
+    });
+}
+
+
+
+
+//Codigo manu
 
 //para mostrar los apuntes de acuerdo con la seleccion del combo
 //carga divs de cada apunte en un vector, guardamos id y los identificamos por materia
 // identificamos la seleccion del combo
 //de acuerdo con la seleccion mostramos solo los que tienen ese id que corresponde a la materia
 //seleccionada y ocultamos el resto
-/*function cargarApuntes(){
+// function cargarApuntes(){
 
-}
-function muestra_oculta(id){
-    if (document.getElementById){ //se obtiene el id
-    var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
-    el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
-    }
-    }
-    window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
-    //muestra_oculta('contenido'); "contenido_a_mostrar" //es el nombre que le dimos al DIV
-//}
+// }
+// function muestra_oculta(id){
+//     if (document.getElementById){ //se obtiene el id
+//     var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
+//     el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+//     }
+//     }
+//     window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
+//     muestra_oculta('contenido'); "contenido_a_mostrar" //es el nombre que le dimos al DIV
+// }
