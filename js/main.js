@@ -40,15 +40,15 @@ function vistaHome(){
 }
 
 function cerrarSesion(){
-    document.getElementById("real-menu").classList.remove("menu-open");
-    document.getElementById("body-overlay").addEventListener("click", cerrarRecuadro);
+    toggleMenu();
+    document.getElementById("body-overlay2").classList.add("menu-open");
     document.getElementById("recuadro_s").classList.add("active");
     document.getElementById("entendido").addEventListener("click", cerrarRecuadro);
 }
 
 function cerrarRecuadro(){
     document.getElementById("recuadro_s").classList.remove("active");
-    document.getElementById("body-overlay").classList.remove("menu-open");
+    document.getElementById("body-overlay2").classList.remove("menu-open");
     sessionStorage.setItem("sesion", 0);
     cargarVistas();
 }
