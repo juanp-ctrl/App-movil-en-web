@@ -285,8 +285,51 @@ main{
     text-align: center;
 }
 
+.about-grid h3{
+	font-size: 3em;
+    text-transform: capitalize;
+    font-family: 'FugazOne-Regular';
+    margin-bottom: 0.5em;
+	color: #339989;
+}
+.about-grid h4 {
+  font-size: 1.5em;
+    color: #ff9541;
+    font-family: 'FugazOne-Regular';
+	margin-bottom: 0.5em;
+}
+.about-grid p {
+  font-size: 1em;
+  color: #777;
+  line-height:1.8em;
+  }
+.about1 {
+  margin: 1.5em 0;
+}
+.history1 {
+  margin: 1.5em 0;
+}
+.history3 {
+  margin: 1.5em 0 0;
+}
+.trend ul li {
+  list-style: none;
+}
+.trend {
+  margin-top: 2em;
+}
+.trend ul li a {
+ font-size: 1em;
+  text-decoration: none;
+  line-height: 2.5em;
+  color: #777;
+  list-style: none;
+ }
+.trend ul li a:hover {
+  color: #ff9541;
+}
 
+.team-grids {
+    margin-top: 1em;
 
-
-
-
+}
