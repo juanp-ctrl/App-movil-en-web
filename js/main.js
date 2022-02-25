@@ -1,17 +1,25 @@
 let ele2, ele, menu, v_login, v_home, entrar, cerrar, vistas = [];
 
+let path = window.location.pathname;
+let page = path.split("/").pop();
+
 //Iniciar la ejecucion de la funcion cuando la pagina cargue por completo
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
         ele2 = document.getElementsByTagName("div")[0];
         ele = ele2.getElementsByTagName("div")[0];
         menu = document.getElementsByTagName("nav")[0];
-        v_login = document.getElementById("vista_login");
-        v_home = document.getElementById("vista_home");
-        vistas.push(v_login);
-        vistas.push(v_home);
+        if(page === "index.html"){
+            v_login = document.getElementById("vista_login");
+            v_home = document.getElementById("vista_home");
+            vistas.push(v_login);
+            vistas.push(v_home);
+            cargarVistas();
+        }
+        else{
+            cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
+        }
         init();
-        cargarVistas();
     }
 });
 
@@ -40,17 +48,22 @@ function vistaHome(){
 }
 
 function cerrarSesion(){
-    document.getElementById("real-menu").classList.remove("menu-open");
-    document.getElementById("body-overlay").addEventListener("click", cerrarRecuadro);
+    toggleMenu();
+    document.getElementById("body-overlay2").classList.add("menu-open");
     document.getElementById("recuadro_s").classList.add("active");
     document.getElementById("entendido").addEventListener("click", cerrarRecuadro);
 }
 
 function cerrarRecuadro(){
     document.getElementById("recuadro_s").classList.remove("active");
-    document.getElementById("body-overlay").classList.remove("menu-open");
+    document.getElementById("body-overlay2").classList.remove("menu-open");
     sessionStorage.setItem("sesion", 0);
-    cargarVistas();
+    if(page === "index.html"){
+        cargarVistas();
+    }
+    else{
+        document.location = "index.html";
+    }
 }
 
 //Funcion para cambiar el estado del menu
