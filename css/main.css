@@ -78,6 +78,18 @@ html{
     display: block;
 }
 
+#Fisica.close{
+    display: none;
+}
+
+#Biologia.close{
+    display: none;
+}
+
+#Calculo.close{
+    display: none;
+}
+
 #open-menu{
     background: none;
     border-style: none;
