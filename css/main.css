@@ -297,6 +297,11 @@ main{
     text-align: center;
 }
 
+<<<<<<< HEAD
+#tituloRegistro{
+    text-align: center;
+}
+=======
 .about-grid h3{
 	font-size: 3em;
     text-transform: capitalize;
@@ -341,4 +346,9 @@ main{
 
 .team-grids {
     margin-top: 1em;
+<<<<<<< HEAD
+=======
+>>>>>>> d85126f2ed2badd7cd9ccb2ed81bcbcaa27b8645
+
+>>>>>>> 9ae76a6ad5f454422a64d80706ad6d5068bd7d12
 }
