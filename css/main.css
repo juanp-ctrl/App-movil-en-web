@@ -297,6 +297,11 @@ main{
     text-align: center;
 }
 
+#tituloApp h1{
+    text-align: center;
+    margin-left: 120px;
+}
+
 .about-grid h3{
 	font-size: 2em;
     margin-bottom: 0.5em;
@@ -349,4 +354,6 @@ main{
     margin-left: 5px;
     display:inline-block;
   }
+
+
  

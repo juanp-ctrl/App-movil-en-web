@@ -133,3 +133,70 @@ function cargarCategorias(){
 //     window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
 //     muestra_oculta('contenido'); "contenido_a_mostrar" //es el nombre que le dimos al DIV
 // }
+
+
+//para el registro
+var valido;
+
+document.getElementById("boton_registro").addEventListener("click",validacion);
+
+
+//funcion para validar que los campos esten completos
+function validacion (){
+    var valores = [];
+    valido = true;
+    //agrego datos del usuario en un array
+    valores.push(document.getElementById("nombre").value);
+    valores.push(document.getElementById("correo").value);
+    valores.push(document.getElementById("universidad").value);
+    valores.push(document.getElementById("carrera").value);
+    valores.push(document.getElementById("monitor").value);
+    valores.push(document.getElementById("password").value);
+
+    for(let i=0; i<valores.length; i++){
+        if (valores[i] == ""){
+            valido = false;
+            break;
+        }
+    }
+
+    if(valido == true){
+        if (!localStorage.getItem(correo)){
+            registro();
+        }
+        else{
+            alert("Usted ya se encuentra registrado");
+            document.location = "index.html";
+        }
+       
+    } else{
+        alert('Por favor completa todos los campos');
+    }
+}
+
+function registro(){
+    var nombre = document.getElementById("nombre").value; //obtengo los valores del los campos del form
+    var correo = document.getElementById("correo").value;
+    var universidad = document.getElementById("universidad").value;
+    var carrera = document.getElementById("carrera").value;
+    var password = document.getElementById("password").value;
+    var formulario = document.getElementById("formulario");
+
+
+    //creo un objeto usuario
+     var datosUsuario = {
+        nombre: nombre,
+        correo: correo,
+        universidad: universidad,
+        carrera: carrera,
+        password: password
+    };
+
+    //agrego los datos del usuario al localStorage
+    localStorage.setItem(datosUsuario.correo, JSON.stringify(datosUsuario));
+    console.log(datosUsuario)
+    formulario.reset(); //blanquea los campos del form
+    alert('Registro exitoso. Bienvenido a EstudiantesApp');
+    document.location = "index.html#"; 
+   
+}

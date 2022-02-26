@@ -1,17 +1,43 @@
-<div>
-    <h2 id="tituloRegistro">Ingrese lo siguiente</h2>
-    <h3 id="entendido">Nombre</h3>
-    <input type="text">
-    <h3>Correo</h3>
-    <input type="email" name="Correo" id="correo">
-    <h3>Universidad</h3>
-    <input type="text">
-    <h3>Carrera</h3>
-    <input type="text">
-    <h3>Es monitor</h3>
-    <input type="checkbox" name="EsMonitor" id="monitor">
-    <h3>Contraseña</h3>
-    <input type="password" name="" id="">
-    <a href="#" id="entendido">Envíar</a>
-    <a href="index.html" id="entendido">Volver</a>
-</div>
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+   
+    <title>Estudiantes App</title>
+</head>
+<body>
+    <div id="celular">
+
+        <header>
+            <div id="tituloApp"><h1>Registro</h1></div>
+        </header>
+
+        <main>
+            <section>
+                <h2 id="tituloRegistro">¡Bienvenido a EstudiantesApp! </h2> <br>
+                <label> Ingresa la siguiente información para la creación de tu perfil </label>
+                    <form id="formulario"novalidate method="POST" onsubmit="return false">
+                        <label> Nombre </label> <br> 
+                        <input type="text" id="nombre" name="nombre" required> <br> <br>
+                        <label> Correo </label> <br> 
+                        <input type="email" name="correo" id="correo" required> <br> <br>
+                        <label> Universidad </label> <br> 
+                        <input type="text" name="universidad" id="universidad" required> <br> <br>
+                        <label> Carrera </label> <br> 
+                        <input type="text" id="carrera" name="carrera" required> <br> <br>
+                        <label> ¿Es monitor? </label> 
+                        <input type="checkbox" name="EsMonitor" id="monitor"> <br> <br>
+                        <label> Contraseña </label> <br>
+                        <input type="password" id="password" name="password" required> <br> <br>
+                        <button type="sumbit" id="boton_registro" >Registrarse</button> 
+                    </form> 
+                    <h3>¿Ya te encuentras registrado?</h3>
+                    <a href="index.html"> Log in</a>
+            </section>
+        </main>
+        <script src="js/main.js"></script>
+</body>
+</html>
