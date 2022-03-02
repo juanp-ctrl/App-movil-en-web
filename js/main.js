@@ -142,11 +142,11 @@ function validacion (){
     valido = true;
     //agrego datos del usuario en un array
     valores.push(document.getElementById("nombre").value);
-    valores.push(document.getElementById("correo").value);
+    valores.push(document.getElementById("correo2").value);
     valores.push(document.getElementById("universidad").value);
     valores.push(document.getElementById("carrera").value);
     valores.push(document.getElementById("monitor").value);
-    valores.push(document.getElementById("password").value);
+    valores.push(document.getElementById("password2").value);
 
     for(let i=0; i<valores.length; i++){
         if (valores[i] == ""){
@@ -156,26 +156,27 @@ function validacion (){
     }
 
     if(valido == true){
-        if (!localStorage.getItem(correo)){
+        if (!localStorage.getItem(correo2)){
             registro();
         }
         else{
             alert("Usted ya se encuentra registrado");
-            document.location = "index.html";
+            cargarVistas();
         }
        
     } 
     else{
         alert('Por favor completa todos los campos');
+        valores = [];
     }
 }
 
 function registro(){
     var nombre = document.getElementById("nombre").value; //obtengo los valores del los campos del form
-    var correo = document.getElementById("correo").value;
+    var correo = document.getElementById("correo2").value;
     var universidad = document.getElementById("universidad").value;
     var carrera = document.getElementById("carrera").value;
-    var password = document.getElementById("password").value;
+    var password = document.getElementById("password2").value;
     var formulario = document.getElementById("formulario");
 
 
@@ -193,7 +194,7 @@ function registro(){
     console.log(datosUsuario)
     formulario.reset(); //blanquea los campos del form
     alert('Registro exitoso. Bienvenido a EstudiantesApp');
-    document.location = "index.html#"; 
+    vistaHome();
    
 }
 
