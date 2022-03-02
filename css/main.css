@@ -78,12 +78,24 @@ html{
     display: block;
 }
 
+#Fisica{
+    display: block;
+}
+
 #Fisica.close{
     display: none;
 }
 
+#Biologia{
+    display: block;
+}
+
 #Biologia.close{
     display: none;
+}
+
+#Calculo{
+    display: block;
 }
 
 #Calculo.close{
@@ -111,6 +123,7 @@ p{
 a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 ul{
@@ -145,6 +158,10 @@ header div img{
 }
 
 #vista_login.hide{
+    display: none;
+}
+
+#vista_registro.hide{
     display: none;
 }
 

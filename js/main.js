@@ -1,4 +1,4 @@
-let ele2, ele, menu, v_login, v_home, entrar, cerrar, vistas = [];
+let ele2, ele, menu, v_login, v_home, entrar, cerrar, vistas = [], categorias = [], val, opcion;
 
 let path = window.location.pathname;
 let page = path.split("/").pop();
@@ -9,20 +9,28 @@ document.addEventListener('readystatechange', function() {
         ele2 = document.getElementsByTagName("div")[0];
         ele = ele2.getElementsByTagName("div")[0];
         menu = document.getElementsByTagName("nav")[0];
+        init();
         if(page === "index.html"){
             v_login = document.getElementById("vista_login");
             v_home = document.getElementById("vista_home");
+            v_registro = document.getElementById("vista_registro");
             vistas.push(v_login);
             vistas.push(v_home);
+            vistas.push(v_registro);
             cargarVistas();
         }
         else if(page === "apuntes.html"){
+            opcion = document.getElementById('opciones').selectedOptions[0].value;
+            for (let i = 0; i < 4; i++) {
+                let valor = document.getElementById("enlace"+(i+1)).childNodes;
+                categorias.push(valor);
+            }
             cargarCategorias();
+            document.getElementById("opciones").addEventListener("change", cargarCategorias);
         }
         else{
             cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
         }
-        init();
     }
 });
 
@@ -33,12 +41,21 @@ function cargarVistas(){
             vistas[i].classList.add("hide");
         }
         vistas[0].classList.remove("hide");
-        entrar = document.getElementById("Entrar").addEventListener("click", vistaHome);
+        document.getElementById("Registrar").addEventListener("click", vistaRegistro);
+        entrar = document.getElementById("Entrar").addEventListener("click", iniciarSesion);
         cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
     }
     else{
         vistaHome();
     }
+}
+
+function vistaRegistro(){
+    document.getElementById("boton_regist").addEventListener("click", validacion);
+    for(let i = 0; i<vistas.length; i++){
+        vistas[i].classList.add("hide");
+    }
+    vistas[2].classList.remove("hide");
 }
 
 function vistaHome(){
@@ -93,57 +110,35 @@ function init() {
 function hasClass(ele, cls) {
     return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
 }
-let categorias = [], val;
+
+let valores2;
+
 function cargarCategorias(){
-    let opcion = document.getElementById('opciones').selectedOptions[0].value;
-    for (let i = 0; i < 4; i++) {
-        let valor = document.getElementById("enlace").childNodes;
-        categorias.push(valor);
-    }
+    opcion = document.getElementById('opciones').selectedOptions[0].value;
 
-    let n = 0;
-
-    categorias.forEach(element => {
-        if(element.item(n).id != opcion){
-            val = document.getElementById(element.item(n).id);
+    for (let j=0; j<categorias.length; j++){
+        valor = categorias.at(j).item(1).id;
+        if(opcion != valor){
+            valores2 = document.getElementsByName(valor);
+            let n = 0;
+            for (let k = 0; k < valores2.length; k++) {
+                valores2[k].classList.add("close");
+            }
         }
-        n++
-    });
+        else{
+            valores2 = document.getElementsByName(valor);
+            for (let k = 0; k < valores2.length; k++) {
+                valores2[k].classList.remove("close");
+            }
+        }
+    }
 }
 
-
-
-
-//Codigo manu
-
-//para mostrar los apuntes de acuerdo con la seleccion del combo
-//carga divs de cada apunte en un vector, guardamos id y los identificamos por materia
-// identificamos la seleccion del combo
-//de acuerdo con la seleccion mostramos solo los que tienen ese id que corresponde a la materia
-//seleccionada y ocultamos el resto
-// function cargarApuntes(){
-
-// }
-// function muestra_oculta(id){
-//     if (document.getElementById){ //se obtiene el id
-//     var el = document.getElementById(id); //se define la variable "el" igual a nuestro div
-//     el.style.display = (el.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
-//     }
-//     }
-//     window.onload = function(){/*hace que se cargue la función lo que predetermina que div estará oculto hasta llamar a la función nuevamente*/
-//     muestra_oculta('contenido'); "contenido_a_mostrar" //es el nombre que le dimos al DIV
-// }
-
-
 //para el registro
-var valido;
-
-document.getElementById("boton_registro").addEventListener("click",validacion);
-
+let valido, valores = [];
 
 //funcion para validar que los campos esten completos
 function validacion (){
-    var valores = [];
     valido = true;
     //agrego datos del usuario en un array
     valores.push(document.getElementById("nombre").value);
@@ -169,7 +164,8 @@ function validacion (){
             document.location = "index.html";
         }
        
-    } else{
+    } 
+    else{
         alert('Por favor completa todos los campos');
     }
 }
@@ -199,4 +195,27 @@ function registro(){
     alert('Registro exitoso. Bienvenido a EstudiantesApp');
     document.location = "index.html#"; 
    
+}
+
+function iniciarSesion(){
+    let correo = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    if(correo != ""){
+        let sesion = JSON.parse(localStorage.getItem(correo));
+        if(sesion != null){
+            if(correo == sesion.correo && password == sesion.password){
+                alert("Bienvenido "+ sesion.nombre + " a EstudiantesApp");
+                vistaHome();
+            }
+            else{
+                alert("Correo o contraseña incorrecta");
+            }
+        }
+        else{
+            alert("Correo o contraseña incorrecta");
+        }
+    }
+    else{
+        alert("Ingresa primero un correo y contraseña");
+    }
 }

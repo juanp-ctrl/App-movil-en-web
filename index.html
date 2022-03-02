@@ -30,9 +30,33 @@
                     <h3>Contraseña:</h3>
                     <input type="password" name="password" id="password">
                 </div>
-                <a href="#" id="Entrar"><h4>Entrar</h4></a>
-                <a href="registro.html" id="Registrar"><h4>Registrar</h4></a>
+                <a id="Entrar"><h4>Entrar</h4></a>
+                <a id="Registrar"><h4>Registrar</h4></a>
             </form>
+        </section>
+        <section id="vista_registro">
+            <h2>Registro</h2>
+            <section>
+                <h2 id="tituloRegistro">¡Bienvenido a EstudiantesApp! </h2> <br>
+                <label> Ingresa la siguiente información para la creación de tu perfil </label>
+                    <form id="formulario"novalidate method="POST" onsubmit="return false">
+                        <label> Nombre </label> <br> 
+                        <input type="text" id="nombre" name="nombre" required> <br> <br>
+                        <label> Correo </label> <br> 
+                        <input type="email" name="correo" id="correo" required> <br> <br>
+                        <label> Universidad </label> <br> 
+                        <input type="text" name="universidad" id="universidad" required> <br> <br>
+                        <label> Carrera </label> <br> 
+                        <input type="text" id="carrera" name="carrera" required> <br> <br>
+                        <label> ¿Es monitor? </label> 
+                        <input type="checkbox" name="EsMonitor" id="monitor"> <br> <br>
+                        <label> Contraseña </label> <br>
+                        <input type="password" id="password" name="password" required> <br> <br>
+                        <button type="sumbit" id="boton_regist">Registrarse</button> 
+                    </form> 
+                    <h3>¿Ya te encuentras registrado?</h3>
+                    <a href="index.html"> Log in</a>
+            </section>
         </section>
         <section id="vista_home">
             <nav id="real-menu" role="navigation">
