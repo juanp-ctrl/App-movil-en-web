@@ -27,6 +27,7 @@ document.addEventListener('readystatechange', function() {
             }
             cargarCategorias();
             document.getElementById("opciones").addEventListener("change", cargarCategorias);
+            cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
         }
         else{
             cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
