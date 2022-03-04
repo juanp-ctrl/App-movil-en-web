@@ -36,7 +36,7 @@ document.addEventListener('readystatechange', function() {
 
 function cargarVistas(){
     let s = sessionStorage.getItem("sesion");
-    if(s == 0){
+    if(s == 0 || s == null){
         for(let i = 0; i<vistas.length; i++){
             vistas[i].classList.add("hide");
         }
@@ -45,7 +45,7 @@ function cargarVistas(){
         entrar = document.getElementById("Entrar").addEventListener("click", iniciarSesion);
         cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
     }
-    else{
+    else if(s == 1){
         vistaHome();
     }
 }
