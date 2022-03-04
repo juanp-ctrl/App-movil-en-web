@@ -120,9 +120,15 @@ p{
     font-size: 2rem;
 }
 
+label{
+    font-size:1.2em;
+    color:#131515;
+}
+
 a{
     text-decoration: none;
-    color: black;
+    color: #339989;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -372,5 +378,24 @@ main{
     display:inline-block;
   }
 
+  .enlaces-registro{
+    font-size:2em;
+  }
 
+  #tituloRegistro{
+    color:#131515;
+    background-color: #7DE2D1;
+  }
+
+  #formulario{
+      font-size:1.5em;
+      line-height:1em;
+      color:#131515;
+  }
+
+  #boton_regist{
+    background-color:#339989;
+    color:#2B2C28;
+    font-weight: bold;
+  }
  
