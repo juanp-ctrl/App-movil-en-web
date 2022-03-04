@@ -1,44 +1,7 @@
+$ColorBlanco : #FFFAFB;
 html{
     font-size: 63.2%;
     text-align: center;
-    font-family: 'Fredoka', sans-serif;
-}
-
-h1{
-    font-size: 3.5rem;
-}
-
-h2{
-    font-size: 3rem;
-}
-
-p{
-    font-size: 2rem;
-}
-
-label{
-    font-size:1.2em;
-    color:#131515;
-}
-
-a{
-    text-decoration: none;
-    color: #339989;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-ul{
-    padding-left: 20px;
-}
-
-li{
-    font-size: 2.5rem;
-    text-decoration: none;
-    list-style-type: none;
-    text-align: left;
-    line-height: 70px;
-    border-bottom: 1px solid black;
 }
 
 #celular{
@@ -93,7 +56,7 @@ li{
     height: 100%;
     padding: .5rem 1rem;
     box-shadow: 0 6px 12px rgba(107, 82, 82, 0.3);
-    background-color:#FFFAFB;
+    background-color:$ColorBlanco;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -144,6 +107,43 @@ li{
     background: none;
     border-style: none;
     cursor: pointer;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+label{
+    font-size:1.2em;
+    color:#131515;
+}
+
+a{
+    text-decoration: none;
+    color: #339989;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+li{
+    font-size: 2.5rem;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+    line-height: 70px;
+    border-bottom: 1px solid black;
 }
 
 header{
@@ -400,6 +400,8 @@ main{
     font-weight: bold;
   }
   #vista_login{
-    background-color: #FFFAFB;
+    background-color: $ColorBlanco;
   }
- 
+  #vista_registro{
+      background-color: $ColorBlanco;
+  }
