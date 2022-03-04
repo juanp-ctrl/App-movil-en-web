@@ -52,6 +52,10 @@ li{
     justify-content: center;
 }
 
+#vista_registro{
+    background-color: #f5f3ed;
+}
+
 #recuadro_s{
     display: none;
     border-radius: 10px;
@@ -331,10 +335,10 @@ main{
 }
 
 .about-grid h3{
-	font-size: 2em;
+	font-size: 1.8em;
     margin-bottom: 0.5em;
 	color: #2B2C28;
-    text-align: left;
+    text-align: center;
     width: auto;
 }
 .about-grid h4 {
