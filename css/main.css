@@ -10,6 +10,7 @@ h1{
 
 h2{
     font-size: 3rem;
+    color: #2ca476;
 }
 
 p{
@@ -150,18 +151,20 @@ header{
     width: 100%;
     display: flex;
     padding-bottom: 30px;
-    background-color: #7DE2D1;
+    background: #1D976C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color:#131515;
 }
 
 header div img{
     width: 40%;
-    padding: 28px 10px 0px 10px;
+    padding: 40px 20px 0px 0px;
 }
 
 #open-menu img{
     width: 50%;
-    padding: 28px 20px 0px 10px;
+    padding: 40px 20px 0px 10px;
 }
 
 #vista_login.hide{
@@ -207,6 +210,7 @@ main{
 #enlace{
     display: flex;
     width: 100%;
+    background-color: #f5f3ed;
 }
 
 #espaciado{
