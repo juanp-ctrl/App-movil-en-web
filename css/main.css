@@ -20,6 +20,14 @@ header div img {
   background-color: #f5f3ed;
 }
 
+#vista_registro h2 {
+  margin: 8px;
+}
+
+#vista_registro section {
+  height: 560px;
+}
+
 #vista_login.hide {
   display: none;
 }
@@ -165,7 +173,8 @@ header div img {
   font-size: 2em;
 }
 
-#tituloRegistro {
+#vista_registro #tituloRegistro {
+  margin: 25px;
   color: #131515;
   background-color: #7DE2D1;
 }
@@ -183,7 +192,8 @@ header div img {
 }
 
 #vista_login {
-  background-color: #FFFAFB;
+  background-color: #f5f3ed;
+  height: 650px;
 }
 
 #celular {

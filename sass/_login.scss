@@ -2,6 +2,14 @@
     background-color: #f5f3ed;
 }
 
+#vista_registro h2{
+  margin: 8px;
+}
+
+#vista_registro section{
+  height: 560px;
+}
+
 #vista_login.hide{
     display: none;
 }
@@ -140,7 +148,8 @@
     font-size:2em;
   }
 
-  #tituloRegistro{
+  #vista_registro #tituloRegistro{
+    margin: 25px;
     color:#131515;
     background-color: #7DE2D1;
   }
@@ -156,6 +165,8 @@
     color:#2B2C28;
     font-weight: bold;
   }
+
   #vista_login{
-    background-color: #FFFAFB;
+    background-color: #f5f3ed;
+    height: 650px;
   }
