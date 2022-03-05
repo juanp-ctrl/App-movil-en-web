@@ -1,0 +1,161 @@
+#vista_registro{
+    background-color: #f5f3ed;
+}
+
+#vista_login.hide{
+    display: none;
+}
+
+#vista_registro.hide{
+    display: none;
+}
+
+#img_login{
+    width: 100%;
+}
+
+#img_login img{
+    width: 60%;
+    padding: 40px;
+}
+
+#vista_home.hide{
+    display: none;
+}
+
+#caja-grupo{
+    border-bottom:1px solid #339989;
+    width: 320px;
+    height: auto;
+ }
+
+ #contenido #imagen-g{
+    width: 95px;
+    height: 95px;
+    float: left;
+ }
+
+ #contenido #imagen-g img{
+    width: 95px;
+    height: 95px;
+    margin-left: 5px;
+    margin-top: 12px;
+    float: left;
+ }
+ #info-g p{
+    float:right;
+    width:180px;
+    height:auto;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: left;
+ }
+ #enlace-g {
+    display:block;
+    margin-top: 200px;
+    width: 180px;
+    height: 24px;
+    margin-left: 105px;
+    border-top: 1px solid black;
+    font-size: 2rem;
+    font-weight: bold;
+
+ }
+ #imagen-detalle img{
+    width: 320px;
+    height: 420px;
+ }
+#caja-detalle{
+    width: 320px;
+    margin-left: 45px;
+    margin-top: 10px;
+    border-top:1px solid #339989;
+    border-bottom:1px solid #339989;
+}
+#caja-detalle p{
+    text-align: center;
+}
+
+#tituloApp h1{
+    text-align: center;
+    margin-left: 120px;
+}
+
+.about-grid h3{
+	font-size: 1.8em;
+    margin-bottom: 0.5em;
+	color: #2B2C28;
+    text-align: center;
+    width: auto;
+}
+.about-grid h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #339989;
+    text-align: left;
+    border-top:1px solid #2B2C28;
+    margin-left: 4px;
+	margin-bottom: 0.5em;
+}
+.about-grid p {
+    font-size: 1.2em;
+    color: #131515;
+    line-height:1.5em;
+    text-align: left;
+    margin-left: 4px;
+    width: auto;
+  }
+
+.team-grid h3{
+    font-size: 2em;
+    color: #339989;
+    font-weight: bold;
+    border-top:1px solid #339989;
+    margin: 0.6em 0 0.3em;
+  }
+  .team-grid div {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #131515;
+    text-align: center;
+    line-height: 1em;
+   }
+  .team-grid {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+
+  }
+
+  .imagen-team {
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    display:inline-block;
+  }
+
+  .enlaces-registro{
+    font-size:2em;
+  }
+
+  #tituloRegistro{
+    color:#131515;
+    background-color: #7DE2D1;
+  }
+
+  #formulario{
+      font-size:1.5em;
+      line-height:1em;
+      color:#131515;
+  }
+
+  #boton_regist{
+    background-color:#339989;
+    color:#2B2C28;
+    font-weight: bold;
+  }
+  #vista_login{
+    background-color: #FFFAFB;
+  }
