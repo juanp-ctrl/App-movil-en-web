@@ -8,10 +8,19 @@
     }
 }
 
+@media (max-width: 390px){
+    #celular{
+        width: 390px;
+    }
+}
+
 @media (max-width: 360px){
     #celular{
         width: 360px;
     }
+    .imagen-team {
+        width: 85px;
+      }
 }
 
 #contenedor-recuadro{
