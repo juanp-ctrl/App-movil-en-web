@@ -2,6 +2,18 @@
     width: 420px;
 }
 
+@media (max-width: 420px){
+    body{
+        background-color: #f5f3ed;
+    }
+}
+
+@media (max-width: 360px){
+    #celular{
+        width: 360px;
+    }
+}
+
 #contenedor-recuadro{
     width: 100%;
     display: flex;
