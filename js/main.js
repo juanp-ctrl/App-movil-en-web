@@ -1,7 +1,9 @@
 let ele2, ele, menu, v_login, v_home, entrar, cerrar, vistas = [], categorias = [], val, opcion;
 
 let path = window.location.pathname;
-let page = path.split("/").pop();
+let arr = path.split("/");
+let page = arr.pop();
+let page2 = arr.pop();
 
 //Iniciar la ejecucion de la funcion cuando la pagina cargue por completo
 document.addEventListener('readystatechange', function() {
@@ -10,7 +12,7 @@ document.addEventListener('readystatechange', function() {
         ele = ele2.getElementsByTagName("div")[0];
         menu = document.getElementsByTagName("nav")[0];
         init();
-        if(page === "index.html"){
+        if(page === "index.html" || page2 === "App-movil-en-web"){
             v_login = document.getElementById("vista_login");
             v_home = document.getElementById("vista_home");
             v_registro = document.getElementById("vista_registro");
