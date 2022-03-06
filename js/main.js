@@ -22,7 +22,7 @@ document.addEventListener('readystatechange', function() {
             document.getElementById("opciones").addEventListener("change", cargarCategorias);
             cerrar = document.getElementById("cerrar_s").addEventListener("click", cerrarSesion);
         }
-        else if(page === "index.html" || page2 === "App-movil-en-web"){
+        else if(page === "index.html" || path === "/App-movil-en-web/"){
             v_login = document.getElementById("vista_login");
             v_home = document.getElementById("vista_home");
             v_registro = document.getElementById("vista_registro");
