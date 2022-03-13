@@ -1,4 +1,10 @@
 # EstudiantesApp
+
+[Logo del App]
+<p align="center">
+  <img src="https://github.com/juanp-ctrl/App-movil-en-web/blob/main/img/iconoapp_v3.png?raw=true" alt="Icono de la App"/>
+</p>
+
 ## Objetivo del proyecto
 Crear un prototipo de aplicación híbrida para el curso Aplicaciones Móviles 2022-1 mediante html, css y js.
 ## Contexto
